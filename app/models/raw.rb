@@ -1,5 +1,9 @@
 class Raw
-  def system
-    true
+  attr_reader :gitlab_resources
+
+  def initialize
+    @gitlab_resources = ::Gitlab::ObjectifiedHash.new({
+      system: true
+    })
   end
 end
