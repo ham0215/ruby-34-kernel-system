@@ -5,7 +5,7 @@ class ObjectifiedHash
 
   private
 
-  attr_reader :hash, :data
+  attr_reader :hash
 
   def method_missing(method_name, *args, &block)
     if hash.key?(method_name.to_sym)
@@ -43,11 +43,11 @@ end
 
 class Test
   def self.run
-    gitlab = ObjectifiedHash.new({
-      system: true
+    obj = ObjectifiedHash.new({
+      system: 'system'
     })
 
-    hoge = Hoge.new(gitlab)
+    hoge = Hoge.new(obj)
     p hoge.get_system
   end
 end
