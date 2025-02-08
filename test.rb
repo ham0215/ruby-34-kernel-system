@@ -48,6 +48,9 @@ class Test
     })
 
     hoge = Hoge.new(obj)
+    # hoge.systemだと通る
+    # hoge.systemを実行した後だと、hoge.get_systemも通る
+    # p hoge.system
     p hoge.get_system
   end
 end
