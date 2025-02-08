@@ -16,19 +16,16 @@ class ObjectifiedHash
   end
 
   def respond_to_missing?(method_name, include_private = false)
-    hash.keys.include?(method_name.to_sym) || super
+    hash.key?(method_name.to_sym) || super
   end
 end
 
 class Hoge
-  # delegate :system, to: :raw
   def system(...)
-    _ = raw
-    # (...)がないと通る
-    # _.system
-
     # なぜかKernel#systemが呼ばれる
-    _.system(...)
+    raw.system(...)
+    # (...)がないと通る
+    # raw.system
   end
 
   def initialize(raw)
