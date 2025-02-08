@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+ruby-34-kernel-system % asdf local ruby 3.3.6
+ruby-34-kernel-system % ruby test.rb
+"system"
+ruby-34-kernel-system % asdf local ruby 3.4.1
+ruby-34-kernel-system % ruby test.rb
+test.rb:26:in 'Kernel#system': wrong number of arguments (given 0, expected 1+) (ArgumentError)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    raw.system(...)
+               ^^^
+        from test.rb:26:in 'Hoge#system'
+        from test.rb:36:in 'Hoge#get_system'
+        from test.rb:51:in 'Test.run'
+        from test.rb:55:in '<main>'
+```
