@@ -1,3 +1,4 @@
+# https://github.com/NARKOZ/gitlab/blob/master/lib/gitlab/objectified_hash.rb
 class ObjectifiedHash
   # Creates a new ObjectifiedHash object.
   def initialize(hash)
