@@ -1,6 +1,6 @@
 class Test
   def self.run
-    gitlab = ::Gitlab::ObjectifiedHash.new({
+    gitlab = ObjectifiedHash.new({
       system: true
     })
 
