@@ -1,5 +1,9 @@
 class Hoge
-  delegate :system, to: :raw
+  # delegate :system, to: :raw
+  def system(...)
+    _ = raw
+    _.system(...)
+  end
 
   def initialize(raw)
     @raw = raw
