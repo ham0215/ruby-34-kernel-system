@@ -2,6 +2,10 @@ class Hoge
   # delegate :system, to: :raw
   def system(...)
     _ = raw
+    # (...)がないと通る
+    # _.system
+
+    # なぜかKernel#systemが呼ばれる
     _.system(...)
   end
 
